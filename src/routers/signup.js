@@ -41,7 +41,7 @@ router.post('/', makeGaEvent('submit', 'form', 'signup'), async (req, res) => {
         req.flash('error', 'Contact number cannot be empty')
         return res.redirect('/signup')
     }
-    if (req.body.password.split(" ").join("").split("   ").join("").length < 5) {
+    if (req.body.password.split(" ").join("").split("   ").join("").length < 5)  {
         req.flash('error', 'Password too weak. Use 5 characters at least.')
         return res.redirect('/signup')
     }
